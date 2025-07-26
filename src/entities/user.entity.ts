@@ -4,16 +4,16 @@ import { EPermission, IUser } from "./models/user.interface";
 @Entity({
   name: "users",
 })
-export class User implements IUser {
+export class Users implements IUser {
   @PrimaryGeneratedColumn('increment', {
     name: 'id',
   })
   id?: number | undefined 
-  @Column()
+  @Column("varchar")
   username: string;
-  @Column()
+  @Column("varchar")
   password: string;
-  @Column({ nullable: true })
+  @Column("varchar")
   email?: string;
   @Column({
     name: "permission_type",

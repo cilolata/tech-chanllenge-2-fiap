@@ -4,16 +4,16 @@ import { IPost } from "./models/post.interface";
 @Entity({
   name: "posts",
 })
-export class Post implements IPost {
+export class Posts implements IPost {
   @PrimaryGeneratedColumn("increment", {
     name: "id",
   })
   id?: number | undefined;
-  @Column()
+  @Column("varchar")  
   title: string;
-  @Column()
+  @Column("text")  
   description: string;
-  @Column({ nullable: true })
+  @Column("varchar" )
   subject?: string;
   @Column({
     type: "timestamp without time zone",
@@ -25,6 +25,6 @@ export class Post implements IPost {
     default: () => "CURRENT_TIMESTAMP",
   })
   updated_at: Date;
-  @Column()
+  @Column("number", { name: "user_id" })
   user_id: number;
 }

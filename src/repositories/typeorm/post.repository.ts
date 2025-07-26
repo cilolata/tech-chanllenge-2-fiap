@@ -1,14 +1,14 @@
 import { IPost } from "@/entities/models/post.interface";
-import { Post } from "@/entities/post.entity";
 import { appDataSource } from "@/lib/typeorm/typeorm";
 import { Repository } from "typeorm";
 import { IPostRepository } from "../post.repository.interface";
+import { Posts } from "@/entities/post.entity";
 
 export class PostRepository implements IPostRepository {
-  private repository: Repository<Post>;
+  private repository: Repository<Posts>;
 
   constructor() {
-    this.repository = appDataSource.getRepository(Post);
+    this.repository = appDataSource.getRepository(Posts);
   }
 
   async createPostRepository(post: IPost): Promise<IPost> {

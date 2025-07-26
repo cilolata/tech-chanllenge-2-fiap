@@ -1,40 +1,42 @@
 {
-    "name": "postai",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "dev": "ts-node -r tsconfig-paths/register src/app.ts",
-      "start": "node build/app.js",
-      "build": "tsup src/app.ts --out-dir build",
-      "test": "jest"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "type": "commonjs",
-    "devDependencies": {
-      "@types/express": "^5.0.3",
-      "@types/node": "^24.0.13",
-      "@types/pg": "^8.15.4",
-      "@typescript-eslint/eslint-plugin": "^8.37.0",
-      "@typescript-eslint/parser": "^8.37.0",
-      "dotenv": "^17.2.0",
-      "eslint": "^9.31.0",
-      "express": "^5.1.0",
-      "install": "^0.13.0",
-      "nodemon": "^3.1.10",
-      "npm": "^11.4.2",
-      "prettier": "^3.6.2",
-      "ts-node": "^10.9.2",
-      "tsconfig-paths": "^4.2.0",
-      "tsup": "^8.5.0",
-      "typescript": "^5.8.3"
-    },
-    "dependencies": {
-      "pg": "^8.16.3",
-      "reflect-metadata": "^0.2.2",
-      "typeorm": "^0.3.25"
-    }
+  "name": "postai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node -r tsconfig-paths/register src/app.ts",
+    "start": "node build/app.js",
+    "build": "tsup src --out-dir build",
+    "test": "jest",
+    "migrate": "ts-node migration:run -d src/typeorm/typeorm.ts",
+    "migrate:revert": "ts-node migration:revert -d src/typeorm/typeorm.ts",
+    "migrate:generate": "ts-node migration:generate src/migrations/NomeDaMigration -d src/typeorm/typeorm.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.1.0",
+    "@types/pg": "^8.15.4",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "dotenv": "^17.2.0",
+    "eslint": "^9.31.0",
+    "express": "^5.1.0",
+    "install": "^0.13.0",
+    "nodemon": "^3.1.10",
+    "npm": "^11.4.2",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "pg": "^8.16.3",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.25"
   }
-  
+}
