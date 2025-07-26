@@ -8,6 +8,6 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/api", router);
+app.use(router);
 
 app.listen(3000, () => "server running on port 3000");

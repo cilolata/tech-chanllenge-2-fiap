@@ -37,4 +37,8 @@ export class PostRepository implements IPostRepository {
   async updatePostRepository(post: IPost): Promise<IPost> {
     return this.repository.save(post);
   }
+
+  async deletePostRepository(postId: number): Promise<void> {
+    await this.repository.delete(postId);
+  }
 }
