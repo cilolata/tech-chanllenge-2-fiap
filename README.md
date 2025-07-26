@@ -2,6 +2,7 @@
 
 - TODO
 - terminar o update post
+- handler de erros e tipagem https api
 - testes
 - docker file/compose
 - vídeo
