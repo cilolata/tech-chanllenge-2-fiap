@@ -24,6 +24,8 @@ CREATE TABLE users (
 	CONSTRAINT users_pkey PRIMARY KEY (id),
 	CONSTRAINT users_username_key UNIQUE (username)
 );
+
+
   CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
