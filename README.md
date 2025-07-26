@@ -12,7 +12,7 @@
 - npm install
 - npm run dev
 
-# Scripts tabelas
+## Scripts tabelas
 
 CREATE TABLE users (
 	id serial4 NOT NULL,
