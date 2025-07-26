@@ -1,4 +1,4 @@
-# tech-chanllenge-2-fiap# tech-chanllenge-2
+# tech-chanllenge-2-fiap
 
 - TODO
 - terminar o update post
@@ -7,7 +7,7 @@
 - vídeo
 - documentaçao
 
-  ## Projeto
+## Projeto
 
 - npm install
 - npm run dev
