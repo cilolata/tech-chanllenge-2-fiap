@@ -1,6 +1,6 @@
 # tech-chanllenge-2-fiap
 
-- TODO
+## TODO
 - handler de erros e tipagem https api
 - testes
 - docker file/compose
