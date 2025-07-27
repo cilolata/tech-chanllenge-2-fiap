@@ -16,12 +16,14 @@ contêm esse termo no título ou conteúdo.
 
 - npm install
 - npm run dev
-- npm run migration (enquanto nao temos o dockfile precisa criar o banco no docker:
+- npm run migration (enquanto nao temos o dockfile precisa criar a imagem do postgress no docker: 
 - 
   docker run -d --name postgres -e POSTGRES_USER=postgres\
   -e POSTGRES_PASSWORD=postgres
   -p 5432:5432 \
   postgres:latest
+
+  depois roda a migration (npm run migration)
 
 <img width="300" height="300" alt="postgres - public - posts" src="https://github.com/user-attachments/assets/c2c83623-ba52-4e75-8b4b-a1072cefe75b" />
 
