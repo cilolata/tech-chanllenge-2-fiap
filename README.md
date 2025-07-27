@@ -5,11 +5,6 @@
 - testes
 - docker file/compose
 - documentaçao
-- enpoint: GET /posts/search - Busca de Posts:
-▪ Este endpoint permitirá a busca de posts por palavras-
-chave. Os usuários poderão passar uma query string com o
-termo de busca e o sistema retornará uma lista de posts que
-contêm esse termo no título ou conteúdo.
 - .env (por enquanro as variaveis estão setadas pois tive problema com o .env)
 
 ## Projeto
