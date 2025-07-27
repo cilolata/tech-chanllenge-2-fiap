@@ -1,6 +1,6 @@
 import { IPost } from "@/entities/models/post.interface";
 import { appDataSource } from "@/lib/typeorm/typeorm";
-import { Repository } from "typeorm";
+import { ILike, Raw, Repository } from "typeorm";
 import { IPostRepository } from "../post.repository.interface";
 import { Posts } from "@/entities/post.entity";
 
@@ -15,11 +15,42 @@ export class PostRepository implements IPostRepository {
     return this.repository.save(post);
   }
 
-  async findAllPostsRepository(page: number, limit: number): Promise<IPost[]> {
-    return this.repository.find({
+  async findAllPostsRepository(
+    page: number,
+    limit: number,
+    search?: string
+  ): Promise<IPost[]> {
+    const params = {
       skip: (page - 1) * limit,
       take: limit,
-    });
+    };
+
+    if (search) {
+      return this.repository.find({
+        ...params,
+        where: [
+          {
+            title: Raw(
+              (alias) => `unaccent(${alias}) ILIKE unaccent(:search)`,
+              { search: `%${search}%` }
+            ),
+          },
+          {
+            description: Raw(
+              (alias) => `unaccent(${alias}) ILIKE unaccent(:search)`,
+              { search: `%${search}%` }
+            ),
+          },
+          {
+            content: Raw(
+              (alias) => `unaccent(${alias}) ILIKE unaccent(:search)`,
+              { search: `%${search}%` }
+            ),
+          },
+        ],
+      });
+    }
+    return this.repository.find(params);
   }
 
   async findPostByIdRepository(postId: number): Promise<IPost | undefined> {

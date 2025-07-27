@@ -3,7 +3,7 @@ import { IUser } from "@/entities/models/user.interface";
 
 export interface IPostRepository {
     createPostRepository(post: IPost): Promise<IPost | undefined>;
-    findAllPostsRepository(upage: number, limit: number): Promise<IPost[] | []>;
+    findAllPostsRepository(upage: number, limit: number, search?: string): Promise<IPost[] | []>;
     findPostByIdRepository(postId: number): Promise<IPost | undefined>;
     updatePostRepository(post: IPost): Promise<IPost | undefined>;
     deletePostRepository(postId: number): Promise<void>;

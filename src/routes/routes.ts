@@ -11,6 +11,7 @@ const router = Router();
 router.post("/usuario", createUserController);
 
 router.post("/posts", createPostController);
+router.get("/posts/search", findAllPostsController);
 router.get("/posts", findAllPostsController);
 router.get("/posts/:id", FindPostByIdPostController);
 router.put("/posts/:id", updatedpostByIdPostController);

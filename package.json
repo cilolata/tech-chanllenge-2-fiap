@@ -10,7 +10,8 @@
     "test": "jest",
     "typeorm": "node ./node_modules/typeorm/cli.js",
     "migration:run": "npm run typeorm -- migration:run -d ./build/lib/typeorm/typeorm.js",
-    "migration": "npm run build && npm run migration:run"
+    "migration": "npm run build && npm run migration:run",
+    "migration:revert": "npm run typeorm -- migration:revert -d ./build/lib/typeorm/typeorm.js"
   },
   "keywords": [],
   "author": "",

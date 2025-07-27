@@ -7,12 +7,13 @@ export const updatedpostByIdPostController = async (
   res: Response
 ) => {
   const postId = Number(req.params.id);
-  const { title, description, subject, user_id } = req.body;
+  const { title, description, subject, content, user_id } = req.body;
 
   const postUpdateSchema = {
     id: Number(postId),
     title: String(title),
     description: String(description),
+    content: String(content),
     subject: String(subject) ?? undefined,
     updated_at: new Date(),
     user_id: Number(user_id),

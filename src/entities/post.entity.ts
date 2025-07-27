@@ -9,11 +9,13 @@ export class Posts implements IPost {
     name: "id",
   })
   id?: number | undefined;
-  @Column("varchar")  
+  @Column("varchar")
   title: string;
-  @Column("text")  
+  @Column("text")
   description: string;
-  @Column("varchar" )
+  @Column("text")
+  content: string;
+  @Column("varchar")
   subject?: string;
   @Column({
     type: "timestamp without time zone",

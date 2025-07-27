@@ -4,14 +4,15 @@ import { EPermission } from "@/entities/models/user.interface";
 import { makeFindUserUseCase } from "@/use-cases/factory/make-find-user-use-case";
 
 export const createPostController = async (req: Request, res: Response) => {
-  const { title, description, subject, user_id } = req.body;
+  const { title, description, subject, content,  user_id } = req.body;
 
   const postSchema = {
     title: String(title),
     description: String(description),
     subject: String(subject) ?? undefined,
+    content: String(content),
     created_at: new Date(),
-    user_id: Number(user_id),
+    user_id: Number(user_id)
   };
   const findUserPermission = makeFindUserUseCase();
   const user = await findUserPermission.findUserUseCase(user_id);
