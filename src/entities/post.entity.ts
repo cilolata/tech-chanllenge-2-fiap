@@ -25,6 +25,6 @@ export class Posts implements IPost {
     default: () => "CURRENT_TIMESTAMP",
   })
   updated_at: Date;
-  @Column("number", { name: "user_id" })
+  @Column("integer", { name: "user_id" })
   user_id: number;
 }

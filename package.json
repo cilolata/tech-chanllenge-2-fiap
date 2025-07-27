@@ -8,9 +8,9 @@
     "start": "node build/app.js",
     "build": "tsup src --out-dir build",
     "test": "jest",
-    "migrate": "ts-node migration:run -d src/typeorm/typeorm.ts",
-    "migrate:revert": "ts-node migration:revert -d src/typeorm/typeorm.ts",
-    "migrate:generate": "ts-node migration:generate src/migrations/NomeDaMigration -d src/typeorm/typeorm.ts"
+    "typeorm": "node ./node_modules/typeorm/cli.js",
+    "migration:run": "npm run typeorm -- migration:run -d ./build/lib/typeorm/typeorm.js",
+    "migration": "npm run build && npm run migration:run"
   },
   "keywords": [],
   "author": "",
