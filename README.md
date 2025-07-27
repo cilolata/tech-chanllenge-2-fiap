@@ -23,7 +23,6 @@ contêm esse termo no título ou conteúdo.
   -p 5432:5432 \
   postgres:latest
 
-- criar a imagem
 <img width="300" height="300" alt="postgres - public - posts" src="https://github.com/user-attachments/assets/c2c83623-ba52-4e75-8b4b-a1072cefe75b" />
 
 
