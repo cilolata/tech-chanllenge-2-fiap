@@ -1,5 +1,4 @@
 import { IPost } from "@/entities/models/post.interface";
-import { IUser } from "@/entities/models/user.interface";
 
 export interface IPostRepository {
     createPostRepository(post: IPost): Promise<IPost | undefined>;

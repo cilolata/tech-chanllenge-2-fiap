@@ -1,4 +1,8 @@
 {
+  "include": [
+    "src/**/*",
+    "src/lib/pg/db.ts" // Adding the missing file to the include path
+  ],
     "compilerOptions": {
       /* Visit https://aka.ms/tsconfig to read more about this file */
   

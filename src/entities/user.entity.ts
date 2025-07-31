@@ -1,9 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 import { EPermission, IUser } from "./models/user.interface";
 
-@Entity({
-  name: "users",
-})
+@Entity("users")
 export class Users implements IUser {
   @PrimaryGeneratedColumn('increment', {
     name: 'id',

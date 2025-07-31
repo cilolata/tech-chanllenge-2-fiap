@@ -30,22 +30,13 @@ export class PostRepository implements IPostRepository {
         ...params,
         where: [
           {
-            title: Raw(
-              (alias) => `unaccent(${alias}) ILIKE unaccent(:search)`,
-              { search: `%${search}%` }
-            ),
+            title:  ILike(`%${search}%`)
           },
           {
-            description: Raw(
-              (alias) => `unaccent(${alias}) ILIKE unaccent(:search)`,
-              { search: `%${search}%` }
-            ),
+            description: ILike(`%${search}%`),
           },
           {
-            content: Raw(
-              (alias) => `unaccent(${alias}) ILIKE unaccent(:search)`,
-              { search: `%${search}%` }
-            ),
+            content:  ILike(`%${search}%`),
           },
         ],
       });

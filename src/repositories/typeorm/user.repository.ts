@@ -10,8 +10,14 @@ export class UserRepository implements IUserRepository {
   constructor() {
     this.repository = appDataSource.getRepository(Users);
   }
+  // @ts-expect-error
   async createUserRepository(user: IUser): Promise<IUser> {
+    try {
+      console.log(this.repository)
     return this.repository.save(user);
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   async findUserRepository(userId: number): Promise<IUser | undefined> {
