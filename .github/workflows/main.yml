@@ -22,5 +22,8 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and Push Docker Image
         run: |
-          docker build -t $DOCKER_USERNAME/postai:latest --build-arg DATABASE_URL=${{  secrets.SUPABASE_URL }} .
+          docker build \
+          -t $DOCKER_USERNAME/postai:latest \
+          --build-arg DATABASE_URL=${{ secrets.DATABASE_URL }} \
+          .
           docker push $DOCKER_USERNAME/postai:latest
