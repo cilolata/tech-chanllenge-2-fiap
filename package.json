@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node -r tsconfig-paths/register src/app.ts",
-    "start": "node build/app.js",
+    "start": "node dist/app.js",
     "build": "tsup src/app.ts --out-dir dist",
     "test": "jest",
     "typeorm": "node ./node_modules/typeorm/cli.js",
-    "migration:run": "npm run typeorm -- migration:run -d ./build/lib/typeorm/typeorm.js",
-    "migration:revert": "npm run typeorm -- migration:revert -d ./build/lib/typeorm/typeorm.js"
+    "migration:run": "npm run typeorm -- migration:run -d ./dist/lib/typeorm/typeorm.js",
+    "migration:revert": "npm run typeorm -- migration:revert -d ./dist/lib/typeorm/typeorm.js"
   },
   "keywords": [],
   "author": "",
