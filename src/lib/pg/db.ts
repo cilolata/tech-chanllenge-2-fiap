@@ -2,10 +2,6 @@ import dotenv from "dotenv";
 import path from "path";
 import { createClient } from "@supabase/supabase-js";
 
-dotenv.config({
-  path: path.resolve(__dirname, "..", ".env"),
-});
-
 // Validação das variáveis de ambiente
 const requiredEnvVars = ["SUPABASE_URL", "SUPABASE_KEY"];
 

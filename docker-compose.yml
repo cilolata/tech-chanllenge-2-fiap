@@ -8,15 +8,7 @@ services:
     environment:
       - SUPABASE_URL=${SUPABASE_URL}
       - SUPABASE_KEY=${SUPABASE_KEY}
-      - TYPEORM_PORT=6543
-      - TYPEORM_USERNAME=postgres
-      - TYPEORM_PASSWORD=${DB_PASSWORD}
-      - TYPEORM_DATABASE=postgres
-      - TYPEORM_ENTITIES=dist/entities/**/*.js
-      - TYPEORM_MIGRATIONS=dist/migrations/**/*.js
-      - TYPEORM_MIGRATIONS_RUN=true
-      - TYPEORM_SSL=true
-
+    
     volumes:
       - ./:/app
       - /app/node_modules
