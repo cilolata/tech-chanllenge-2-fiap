@@ -13,7 +13,7 @@
   
 Obs: adicionei campos novos nas entidades - portando para criar post adicionar os campos novos
 
-### criar arquivo .env na raiz - nao compartilhar rs
+### criar arquivo .env na raiz (Projeto de Estudo por isso o .Env aqui)
 
 SUPABASE_URL=aws-0-sa-east-1.pooler.supabase.com
 
