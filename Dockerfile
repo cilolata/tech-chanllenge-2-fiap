@@ -10,8 +10,13 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+ARG SUPABASE_URL
+
+RUN echo SUPABASE_URL=${SUPABASE_URL} > .env
+RUN echo PORT=5432 > .env
+
+RUN pnpm run build
 
 EXPOSE 3000
 
-CMD ["npm", "run", "dev"]
+CMD ["node", "dist/main"]
