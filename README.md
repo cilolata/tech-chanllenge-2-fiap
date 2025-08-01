@@ -9,25 +9,12 @@
 ## Projeto
 
 ### CRIAR E RODAR O BANCO COM O DOCKER:
-   - docker-compose up --build (caso precise refazer docker-compose down -v && docker-compose up)
+   - docker-compose up --build (caso precise refazer docker-compose down -v && docker-compose up --build)
   
-Obs: adicionei campos novos nas entidades - portando para criar post adicionar os campos novos
+// a conexão com o supabase a url tá setada hard coded por enquanto até criar 
 
-### criar arquivo .env na raiz (Projeto de Estudo por isso o .Env aqui)
 
-SUPABASE_URL=aws-0-sa-east-1.pooler.supabase.com
 
-SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5bXl0c2FldmJyYmRvamVldnR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM5ODY4NDUsImV4cCI6MjA2OTU2Mjg0NX0.1rxYRXAvyW_749ZvIzYkSmJPb5l0qPlQu5dyISa4tP8
-
-DB_PORT=5432
-
-DB_USERNAME=postgres.bymytsaevbrbdojeevty
-
-DB_PASSWORD=prOxAIooeA6jhDZp
-
-DB_NAME=postai
-
-NODE_ENV=development
 
 
   
