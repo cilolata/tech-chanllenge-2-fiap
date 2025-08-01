@@ -1,4 +1,4 @@
-import { PostRepository } from "@/repositories/typeorm/post.repository";
+import { PostRepository } from "../../repositories/typeorm/post.repository";
 import { DeletePostUseCase } from "../post/delete-post";
 
 export const makeDeletePostByIdUseCase = () => {

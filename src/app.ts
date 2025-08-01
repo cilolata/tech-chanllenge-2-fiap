@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import "dotenv/config";
-import "@/lib/typeorm/typeorm"
+import "./lib/typeorm/typeorm"
 
 import express from "express";
 import { router } from "./routes/routes";

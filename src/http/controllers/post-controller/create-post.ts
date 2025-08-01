@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
-import { makeCreatePostUseCase } from "@/use-cases/factory/make-create-post-use-case";
-import { EPermission } from "@/entities/models/user.interface";
-import { makeFindUserUseCase } from "@/use-cases/factory/make-find-user-use-case";
+import { makeFindUserUseCase } from "../../../use-cases/factory/make-find-user-use-case";
+import { makeCreatePostUseCase } from "../../../use-cases/factory/make-create-post-use-case";
+import { EPermission } from "../../../entities/models/user.interface";
+
 
 export const createPostController = async (req: Request, res: Response) => {
   const { title, description, subject, content,  user_id } = req.body;

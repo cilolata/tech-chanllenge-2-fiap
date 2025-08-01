@@ -1,8 +1,8 @@
 import { IUserRepository } from "../user.repository.interface";
-import { IUser } from "@/entities/models/user.interface";
-import { Users } from "@/entities/user.entity";
-import { appDataSource } from "@/lib/typeorm/typeorm";
+import { appDataSource } from "../../lib/typeorm/typeorm";
 import { Repository } from "typeorm";
+import { IUser } from "../../entities/models/user.interface";
+import { Users } from "../../entities/user.entity";
 
 export class UserRepository implements IUserRepository {
   private repository: Repository<Users>;

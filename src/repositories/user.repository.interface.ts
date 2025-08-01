@@ -1,4 +1,4 @@
-import { IUser } from "@/entities/models/user.interface";
+import { IUser } from "../entities/models/user.interface";
 
 
 export interface IUserRepository {

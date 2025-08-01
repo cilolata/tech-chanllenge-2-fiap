@@ -1,5 +1,6 @@
-import { IPost } from "@/entities/models/post.interface";
-import { IPostRepository } from "@/repositories/post.repository.interface";
+import { IPost } from "../../entities/models/post.interface";
+import { IPostRepository } from "../../repositories/post.repository.interface";
+
 
 export class CreatePostrUseCase {
   constructor(private postRepository: IPostRepository) {}

@@ -1,10 +1,11 @@
 import { Router } from "express";
-import { createPostController } from "@/http/controllers/post-controller/create-post";
-import { findAllPostsController } from "@/http/controllers/post-controller/find-all-posts";
-import { createUserController } from "@/http/controllers/user-controller/create-user";
-import { FindPostByIdPostController } from "@/http/controllers/post-controller/find-post-by-id";
-import { updatedpostByIdPostController } from "@/http/controllers/post-controller/update.post";
-import { deletePostByIdPostController } from "@/http/controllers/post-controller/delete-post";
+import { createPostController } from "../http/controllers/post-controller/create-post";
+import { deletePostByIdPostController } from "../http/controllers/post-controller/delete-post";
+import { findAllPostsController } from "../http/controllers/post-controller/find-all-posts";
+import { FindPostByIdPostController } from "../http/controllers/post-controller/find-post-by-id";
+import { updatedpostByIdPostController } from "../http/controllers/post-controller/update.post";
+import { createUserController } from "../http/controllers/user-controller/create-user";
+
 
 const router = Router();
 

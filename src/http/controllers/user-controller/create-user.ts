@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
-import { makeCreateUserUseCase } from "@/use-cases/factory/make-create-user-use-case";
-import { fromDbPermission } from "@/utils";
+import { fromDbPermission } from "../../../utils";
+import { makeCreateUserUseCase } from "../../../use-cases/factory/make-create-user-use-case";
+
 
 export const createUserController = async (req: Request, res: Response) => {
   const { id, username, password, permissionType, email } = req.body;

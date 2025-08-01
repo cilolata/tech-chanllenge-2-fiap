@@ -1,4 +1,4 @@
-import { UserRepository } from "@/repositories/typeorm/user.repository";
+import { UserRepository } from "../../repositories/typeorm/user.repository";
 import { CreateUserUseCase } from "../user/create-user";
 
 export const makeCreateUserUseCase = () => {

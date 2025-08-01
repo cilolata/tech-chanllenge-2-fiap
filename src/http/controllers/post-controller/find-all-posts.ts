@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { makeFindAllPostsUseCase } from "@/use-cases/factory/make-find-all-posts-use-case";
+import { makeFindAllPostsUseCase } from "../../../use-cases/factory/make-find-all-posts-use-case";
 
 export const findAllPostsController = async (req: Request, res: Response) => {
   const { page, limit, search } = req.query;

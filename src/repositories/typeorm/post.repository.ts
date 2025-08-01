@@ -1,8 +1,8 @@
-import { IPost } from "@/entities/models/post.interface";
-import { appDataSource } from "@/lib/typeorm/typeorm";
-import { ILike, Raw, Repository } from "typeorm";
+import { appDataSource } from "../../lib/typeorm/typeorm";
+import { ILike, Repository } from "typeorm";
 import { IPostRepository } from "../post.repository.interface";
-import { Posts } from "@/entities/post.entity";
+import { IPost } from "../../entities/models/post.interface";
+import { Posts } from "../../entities/post.entity";
 
 export class PostRepository implements IPostRepository {
   private repository: Repository<Posts>;

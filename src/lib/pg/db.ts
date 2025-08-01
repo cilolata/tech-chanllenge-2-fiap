@@ -1,5 +1,4 @@
 import dotenv from "dotenv";
-import path from "path";
 import { createClient } from "@supabase/supabase-js";
 
 // Validação das variáveis de ambiente

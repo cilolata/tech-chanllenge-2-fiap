@@ -1,4 +1,4 @@
-import { EPermission } from "@/entities/models/user.interface";
+import { EPermission } from "../entities/models/user.interface";
 
 export const fromDbPermission = (dbPerm: number): EPermission => {
     if (dbPerm === 0) return EPermission.STUDENT;

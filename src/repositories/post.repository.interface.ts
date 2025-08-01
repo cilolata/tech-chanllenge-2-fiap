@@ -1,4 +1,4 @@
-import { IPost, IPostUpdate } from "@/entities/models/post.interface";
+import { IPost, IPostUpdate } from "../entities/models/post.interface";
 
 export interface IPostRepository {
     createPostRepository(post: IPost): Promise<IPost | undefined>;

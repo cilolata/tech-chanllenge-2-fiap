@@ -1,8 +1,7 @@
 import { Request, Response } from "express";
-import { makeFindPostByIdUseCase } from "@/use-cases/factory/make-find-post-by-id";
-import { makeUpdatePostUseCase } from "@/use-cases/factory/make-update-post";
-import { IPost } from "@/entities/models/post.interface";
-import { removeUndefinedValues } from "@/utils";
+import { makeUpdatePostUseCase } from "../../../use-cases/factory/make-update-post";
+import { removeUndefinedValues } from "../../../utils";
+
 
 export const updatedpostByIdPostController = async (
   req: Request,

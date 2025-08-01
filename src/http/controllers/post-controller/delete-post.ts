@@ -1,5 +1,5 @@
-import { makeDeletePostByIdUseCase } from "@/use-cases/factory/make-delete-post-use-case";
 import { Request, Response } from "express";
+import { makeDeletePostByIdUseCase } from "../../../use-cases/factory/make-delete-post-use-case";
 
 export const deletePostByIdPostController = async (
   req: Request,
