@@ -8,8 +8,6 @@ RUN npm install
 
 COPY . .
 
-COPY --from=builder /app/dist/entities ./dist/entities
-
 ARG SUPABASE_URL
 
 RUN echo SUPABASE_URL=${SUPABASE_URL} > .env
