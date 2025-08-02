@@ -70,11 +70,11 @@ npm run start
 
 - GET: https://postai-latest.onrender.com/posts
 - GET: https://postai-latest.onrender.com/posts/id
-- GET: https://postai-latest.onrender.com/posts/search=
+- GET: https://postai-latest.onrender.com/posts/search=search
 
 - PUT: https://postai-latest.onrender.com/posts/id
 
-- DELETE: https://postai-latest.onrender.com/posts/ID
+- DELETE: https://postai-latest.onrender.com/posts/id
 
 # imagem dockerhub
 
