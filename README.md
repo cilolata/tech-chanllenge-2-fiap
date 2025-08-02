@@ -23,7 +23,7 @@ flowchart TD
 
     D -->|Professor?| H[POST/PUT/DELETE /posts]
     D -->|Aluno / Professor| I[GET /posts]
-    D -->|Aluno / Professor?| J[GET /posts?search=palavra]
+    D -->|Aluno / Professor| J[GET /posts?search=palavra]
 
     H --> G
     I --> G
