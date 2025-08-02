@@ -35,6 +35,10 @@ flowchart TD
 
 ![supabase-schema-bymytsaevbrbdojeevty](https://github.com/user-attachments/assets/7924ab92-20ca-4477-915a-1754c48f79f6)
 
+PERMISSION_TYPE: 
+ - PROFESSOR: 1
+ - ALUNO: 0
+
 
 # Instalação
 
@@ -53,20 +57,21 @@ migration:run
 # rodar aplicação
 
 npm run build
+
 npm run start
 
 # urls deploy
 
-POST: https://postai-latest.onrender.com/usuario
-POST: https://postai-latest.onrender.com/posts
+- POST: https://postai-latest.onrender.com/usuario 
+- POST: https://postai-latest.onrender.com/posts
 
-GET: https://postai-latest.onrender.com/posts
-GET: https://postai-latest.onrender.com/posts/id
-GET: https://postai-latest.onrender.com/posts/search=
+- GET: https://postai-latest.onrender.com/posts
+- GET: https://postai-latest.onrender.com/posts/id
+- GET: https://postai-latest.onrender.com/posts/search=
 
-PUT: https://postai-latest.onrender.com/posts/id
+- PUT: https://postai-latest.onrender.com/posts/id
 
-DELETE: https://postai-latest.onrender.com/posts/ID
+- DELETE: https://postai-latest.onrender.com/posts/ID
 
 # imagem dockerhub
 
