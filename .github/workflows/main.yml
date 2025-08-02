@@ -11,6 +11,7 @@ jobs:
 
     env:
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
 
     steps:
@@ -25,6 +26,8 @@ jobs:
         run: |
           docker build \
           -t $DOCKER_USERNAME/postai:latest \
-          --build-arg DATABASE_URL=${{ secrets.DATABASE_URL }} \
+            --build-arg SUPABASE_URL=$SUPABASE_URL \
+            --build-arg SUPABASE_KEY=$SUPABASE_KEY \
+            --build-arg DATABASE_URL=${{ secrets.DATABASE_URL }} \
           .
           docker push $DOCKER_USERNAME/postai:latest
