@@ -12,7 +12,7 @@ export class PostRepository implements IPostRepository {
   }
 
   async createPostRepository(post: IPost): Promise<IPost> {
-    return this.repository.save(post);
+    return await this.repository.save(post);
   }
 
   async findAllPostsRepository(
@@ -26,7 +26,7 @@ export class PostRepository implements IPostRepository {
     };
 
     if (search) {
-      return this.repository.find({
+      return await this.repository.find({
         ...params,
         where: [
           {
@@ -41,7 +41,7 @@ export class PostRepository implements IPostRepository {
         ],
       });
     }
-    return this.repository.find(params);
+    return await this.repository.find(params);
   }
 
   async findPostByIdRepository(postId: number): Promise<IPost | undefined> {
@@ -57,7 +57,7 @@ export class PostRepository implements IPostRepository {
   }
 
   async updatePostRepository(post: IPost): Promise<IPost> {
-    return this.repository.save(post);
+    return await this.repository.save(post);
   }
 
   async deletePostRepository(postId: number): Promise<void> {

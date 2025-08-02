@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node -r tsconfig-paths/register src/app.ts",
     "start": "node dist/app.js",
-    "build": "tsc",
+    "dev": "ts-node-dev src/app.ts",
+    "build": "rm -rf dist/ && tsc",
     "test": "jest",
-    "typeorm": "node ./node_modules/typeorm/cli.js",
-    "migration:run": "npm run typeorm -- migration:run -d ./dist/lib/typeorm/typeorm.js",
-    "migration:revert": "npm run typeorm -- migration:revert -d ./dist/lib/typeorm/typeorm.js"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "migration:generate": "npm run typeorm -- migration:generate ./src/migrations/$npm_config_name -d src/data-source.ts",
+    "migration:run": "npm run typeorm -- migration:run -d dist/src/data-source.js",
+    "migration:revert": "npm run typeorm -- migration:revert -d dist/src/data-source.js"
   },
   "keywords": [],
   "author": "",

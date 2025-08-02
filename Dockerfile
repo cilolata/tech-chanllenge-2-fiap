@@ -9,8 +9,10 @@ RUN npm install
 COPY . .
 
 ARG SUPABASE_URL
+ARG SUPABASE_KEY
 
 RUN echo SUPABASE_URL=${SUPABASE_URL} > .env
+RUN echo SUPABASE_KEY=${SUPABASE_KEY} > .env
 RUN echo PORT=5432 > .env
 
 RUN npm run build
