@@ -48,7 +48,9 @@ npm run install
 # .env
 
 SUPABASE_URL=
+<br>
 SUPABASE_KEY=
+<br>
 DB_PORT=
 
 # migrations
