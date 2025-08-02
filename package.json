@@ -9,9 +9,8 @@
     "build": "rm -rf dist/ && tsc",
     "test": "jest",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "migration:generate": "npm run typeorm -- migration:generate ./src/migrations/$npm_config_name -d src/data-source.ts",
-    "migration:run": "npm run typeorm -- migration:run -d dist/src/data-source.js",
-    "migration:revert": "npm run typeorm -- migration:revert -d dist/src/data-source.js"
+    "migration:run": "npm run typeorm -- migration:run -d dist/typeorm/typeorm.js",
+    "migration:revert": "npm run typeorm -- migration:revert -d dist/typeorm/typeorm.js"
   },
   "keywords": [],
   "author": "",
