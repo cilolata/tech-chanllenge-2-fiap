@@ -1,7 +1,7 @@
 import { appDataSource } from "../../lib/typeorm/typeorm";
 import { ILike, Repository } from "typeorm";
 import { IPostRepository } from "../post.repository.interface";
-import { IPost } from "../../entities/models/post.interface";
+import { IPost, IPostUpdate } from "../../entities/models/post.interface";
 import { Posts } from "../../entities/post.entity";
 
 export class PostRepository implements IPostRepository {
@@ -56,8 +56,25 @@ export class PostRepository implements IPostRepository {
     return post ?? undefined;
   }
 
-  async updatePostRepository(post: IPost): Promise<IPost> {
-    return await this.repository.save(post);
+  async updatePostRepository(post: IPostUpdate): Promise<IPostUpdate | undefined> {
+    if(!post.id) {
+      throw new Error("Post não encontrado");
+    }
+
+    const prevPostValues = await this.repository.findOne({
+      where: { id: post.id },
+    });
+
+    if (!prevPostValues) {
+      return undefined;
+    }
+
+    const mergedPost = {
+      ...prevPostValues,
+      ...post
+    };
+
+    await this.repository.update(post.id, mergedPost);
   }
 
   async deletePostRepository(postId: number): Promise<void> {

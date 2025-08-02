@@ -10,7 +10,7 @@ export const createPostController = async (req: Request, res: Response) => {
   const postSchema = {
     title: String(title),
     description: String(description),
-    subject: String(subject) ?? undefined,
+    subject: subject ? String(subject) : undefined,
     content: String(content),
     created_at: new Date(),
     user_id: Number(user_id)
