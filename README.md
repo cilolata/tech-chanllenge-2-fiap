@@ -10,7 +10,7 @@
 - testes
 - swagger
 
-# Arquitetura
+## Arquitetura
 ```mermaid
 flowchart TD
     A[Cliente] -->|Requisições| B[API]
@@ -41,11 +41,11 @@ PERMISSION_TYPE:
  - ALUNO: 0
 
 
-# Instalação
+## Instalação
 
 npm run install
 
-# .env
+## .env
 
 SUPABASE_URL=
 <br>
@@ -53,17 +53,17 @@ SUPABASE_KEY=
 <br>
 DB_PORT=
 
-# migrations
+## migrations
 
 migration:run
 
-# rodar aplicação
+## rodar aplicação
 
 npm run build
 
 npm run start
 
-# urls deploy
+## urls deploy
 
 - POST: https://postai-latest.onrender.com/usuario 
 - POST: https://postai-latest.onrender.com/posts
@@ -76,11 +76,11 @@ npm run start
 
 - DELETE: https://postai-latest.onrender.com/posts/id
 
-# imagem dockerhub
+## imagem dockerhub
 
 - cilolata/postai
 
-# Banco de dados
+## Banco de dados
 
  - postgres
  - supabase (nuvem)
