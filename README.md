@@ -6,7 +6,7 @@
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://docker.com/)
 
 ## TODO
-- handler de erros e tipagem https api
+- handler de erros e tipagem https api (opcional)
 - testes
 
 # Arquitetura
@@ -76,6 +76,11 @@ npm run start
 # imagem dockerhub
 
 - cilolata/postai
+
+# Banco de dados
+
+ - postgres
+ - supabase (nuvem)
 
 
 
