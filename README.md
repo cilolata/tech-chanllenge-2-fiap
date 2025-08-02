@@ -53,10 +53,6 @@ SUPABASE_KEY=
 <br>
 DB_PORT=
 
-## migrations
-
-migration:run
-
 ## rodar aplicação
 
 npm run build
