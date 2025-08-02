@@ -8,6 +8,7 @@
 ## TODO
 - handler de erros e tipagem https api (opcional)
 - testes
+- swagger
 
 # Arquitetura
 ```mermaid
@@ -21,8 +22,8 @@ flowchart TD
     end
 
     D -->|Professor?| H[POST/PUT/DELETE /posts]
-    D -->|Aluno?| I[GET /posts]
-    D -->|Aluno?| J[GET /posts?search=palavra]
+    D -->|Aluno / Professor| I[GET /posts]
+    D -->|Aluno / Professor?| J[GET /posts?search=palavra]
 
     H --> G
     I --> G
