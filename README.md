@@ -11,27 +11,15 @@
 - swagger
 
 ## Arquitetura
-```mermaid
-flowchart TD
-    A[Cliente] -->|Requisições| B[API]
-    
-    subgraph Banco de Dados
-        E[(PostgreSQL)]
-        F[Tabela Users]
-        G[Tabela Posts]
-    end
-
-    D -->|Professor?| H[POST/PUT/DELETE /posts]
-    D -->|Aluno / Professor| I[GET /posts]
-    D -->|Aluno / Professor| J[GET /posts?search=palavra]
-
-    H --> G
-    I --> G
-    J --> G
-
-    style H stroke:#4CAF50,stroke-width:2px
-    style I stroke:#2196F3,stroke-width:2px
-    style J stroke:#2196F3,stroke-width:2px
+graph LR
+  A[👤 POST /user] --> B[⚙️ API]
+  B --> C[(🔵 Supabase)]
+  C --> D{E professor?}
+  D -->|Sim| E[👨🏫📝 Create Post]
+  E --> F[✏️ Edit Post]
+  F --> G[🗑️ Delete Post]
+  D -->|Não| H[👩🎒👀 View Posts]
+  H --> I[📖 Read Content]
 ```
 
 ![supabase-schema-bymytsaevbrbdojeevty](https://github.com/user-attachments/assets/7924ab92-20ca-4477-915a-1754c48f79f6)
