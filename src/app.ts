@@ -4,11 +4,13 @@ import "./lib/typeorm/typeorm"
 
 import express from "express";
 import { router } from "./routes/routes";
+import { handleError } from "./middlewares/errorHandlers";
 
 const app = express();
 
 app.use(express.json());
 
 app.use(router);
+app.use(handleError)
 
-app.listen(3000, () => "server running on port 3000");
+export default app
