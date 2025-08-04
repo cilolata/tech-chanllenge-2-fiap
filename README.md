@@ -10,7 +10,8 @@
 Este é o segundo projeto do curso FullStack - Fiap. Nele executamos a criaçao de uma api para que professores possam compartilhar as aulas e os alunos acessarem. Utilizamos basicamente as ferramentas ensinadas no módulo, como nodejs, typescript, typeorm, postgres, entre outras, e usamos o conceito de SOLID para estruturar a arquitetura. Foi um trabalho desafiador, pois atuamos em outras áreas (frontend e dados), mas conseguimos finalizar o projeto, e já estamos pensando em muitas melhorias. Nós também subimos a aplicação no github actions para integração contínua e fluxo de entrega e a API está publicada no Render. Fizemos a documentação com swagger.
 
 ## Arquitetura
-<img width="1026" height="566" alt="Screenshot 2025-08-03 at 19 29 27" src="https://github.com/user-attachments/assets/592bca11-1180-4b55-b17b-42cdab24d25b" />
+
+<img width="1187" height="590" alt="Screenshot 2025-08-03 at 23 38 19" src="https://github.com/user-attachments/assets/06cad449-0700-43e1-b250-93de2367e4d3" />
 
 ## Banco de dados
 
