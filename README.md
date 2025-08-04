@@ -11,7 +11,8 @@ Este é o segundo projeto do curso FullStack - Fiap. Nele executamos a criaçao 
 
 ## Arquitetura
 
-<img width="1187" height="590" alt="Screenshot 2025-08-03 at 23 38 19" src="https://github.com/user-attachments/assets/06cad449-0700-43e1-b250-93de2367e4d3" />
+<img width="1165" height="561" alt="Screenshot 2025-08-04 at 10 23 37" src="https://github.com/user-attachments/assets/f12d34e9-61bf-4110-825d-a99ab9df6908" />
+
 
 ## Banco de dados
 
