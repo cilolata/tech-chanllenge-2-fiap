@@ -1,6 +1,6 @@
 import request from "supertest";
-import app from "../src/app";
-import { appDataSource } from "../src/lib/typeorm/typeorm";
+import { appDataSource } from "../lib/typeorm/typeorm";
+import app from "../app";
 
 beforeAll(async () => {
   if (!appDataSource.isInitialized) await appDataSource.initialize();
