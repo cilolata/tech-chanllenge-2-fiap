@@ -16,11 +16,11 @@ Este é o segundo projeto do curso FullStack - Fiap. Nele executamos a criaçao 
 
 ## Banco de dados
 
-- O banco de dados foi o relacional - postgres, e utilizamos o Superbase para armazenar em nuvem
+- O banco de dados foi o relacional - postgres, e utilizamos o Supabase para armazenar em nuvem
 
 #### tabelas
 
-permission_type: PROFESSOR = 1, ALUNO = 0
+permission_type: PROFESSOR = 1 , ALUNO = 0
 
 ![supabase-schema-bymytsaevbrbdojeevty](https://github.com/user-attachments/assets/7924ab92-20ca-4477-915a-1754c48f79f6)
 
@@ -73,8 +73,8 @@ DB_PORT=
 
 ## Swagger
 
-npm run build
-npm run start
+- npm run build
+- npm run start
 
 - http://localhost:3000/postai
 
