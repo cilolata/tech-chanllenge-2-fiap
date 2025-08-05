@@ -1,4 +1,4 @@
-import { appDataSource } from "../../lib/typeorm/typeorm";
+import { AppDataSource } from "../../lib/typeorm/typeorm";
 import { ILike, Repository } from "typeorm";
 import { IPostRepository } from "../post.repository.interface";
 import { IPost, IPostUpdate } from "../../entities/models/post.interface";
@@ -8,7 +8,7 @@ export class PostRepository implements IPostRepository {
   private repository: Repository<Posts>;
 
   constructor() {
-    this.repository = appDataSource.getRepository(Posts);
+    this.repository = AppDataSource.getRepository(Posts);
   }
 
   async createPostRepository(post: IPost): Promise<IPost> {
@@ -29,18 +29,13 @@ export class PostRepository implements IPostRepository {
       return await this.repository.find({
         ...params,
         where: [
-          {
-            title:  ILike(`%${search}%`)
-          },
-          {
-            description: ILike(`%${search}%`),
-          },
-          {
-            content:  ILike(`%${search}%`),
-          },
+          { title: ILike(`%${search}%`) },
+          { description: ILike(`%${search}%`) },
+          { content: ILike(`%${search}%`) },
         ],
       });
     }
+
     return await this.repository.find(params);
   }
 
@@ -57,7 +52,7 @@ export class PostRepository implements IPostRepository {
   }
 
   async updatePostRepository(post: IPostUpdate): Promise<IPostUpdate | undefined> {
-    if(!post.id) {
+    if (!post.id) {
       throw new Error("Post não encontrado");
     }
 
@@ -71,10 +66,11 @@ export class PostRepository implements IPostRepository {
 
     const mergedPost = {
       ...prevPostValues,
-      ...post
+      ...post,
     };
 
     await this.repository.update(post.id, mergedPost);
+    return mergedPost;
   }
 
   async deletePostRepository(postId: number): Promise<void> {

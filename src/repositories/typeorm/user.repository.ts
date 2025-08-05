@@ -1,5 +1,5 @@
 import { IUserRepository } from "../user.repository.interface";
-import { appDataSource } from "../../lib/typeorm/typeorm";
+import { AppDataSource } from "../../lib/typeorm/typeorm";
 import { Repository } from "typeorm";
 import { IUser } from "../../entities/models/user.interface";
 import { Users } from "../../entities/user.entity";
@@ -8,8 +8,9 @@ export class UserRepository implements IUserRepository {
   private repository: Repository<Users>;
 
   constructor() {
-    this.repository = appDataSource.getRepository(Users);
+    this.repository = AppDataSource.getRepository(Users);
   }
+
   async createUserRepository(user: IUser): Promise<IUser> {
     return await this.repository.save(user);
   }
