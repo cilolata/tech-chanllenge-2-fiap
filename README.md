@@ -57,7 +57,6 @@ Professores / Alunos
 ## Setup inicial
 
 - npm run install
-- npm run build
 - npm run start
 
 ## publicação da imagem dockerhub
@@ -73,9 +72,7 @@ DB_PORT=
 
 ## Swagger
 
-- npm run build
 - npm run start
-
 - http://localhost:3000/postai
 
 
