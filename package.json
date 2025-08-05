@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "npm run build && node dist/server.js",
-  "dev": "ts-node-dev src/server.ts",
-  "build": "rimraf dist && tsc",
-  "test": "cross-env NODE_ENV=test dotenv -e .env -- jest --coverage",
-  "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-  "migration:run": "npm run typeorm -- migration:run -d dist/lib/typeorm/typeorm.js",
-"migration:revert": "npm run typeorm -- migration:revert -d dist/lib/typeorm/typeorm.js"
-}
-,
+    "start": "npm run build && node dist/server.js",
+    "dev": "ts-node-dev src/server.ts",
+    "build": "rimraf dist && tsc",
+    "test": "cross-env NODE_ENV=test dotenv -e .env -- jest --coverage",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "migration:run": "npm run typeorm -- migration:run -d dist/lib/typeorm/typeorm.js",
+    "migration:revert": "npm run typeorm -- migration:revert -d dist/lib/typeorm/typeorm.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
