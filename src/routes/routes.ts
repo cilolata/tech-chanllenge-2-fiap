@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { createUserController } from "../http/controllers/user-controller/create-user";
-import { findAllUsersController } from "../http/controllers/user-controller/find-all-users";
+import { findUsersController } from "../http/controllers/user-controller/find-user";
 
 import { createPostController } from "../http/controllers/post-controller/create-post";
 import { deletePostByIdPostController } from "../http/controllers/post-controller/delete-post";
@@ -12,7 +12,7 @@ const router = Router();
 
 // Usuários
 router.post("/usuario", createUserController);
-router.get("/usuario", findAllUsersController); // 🔹 Adicionado GET
+router.get("/usuario", findUsersController);
 
 // Posts
 router.post("/posts", createPostController);
