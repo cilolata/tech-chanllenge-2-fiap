@@ -11,8 +11,8 @@ import { updatedpostByIdPostController } from "../http/controllers/post-controll
 const router = Router();
 
 // Usuários
-router.post("/usuario", createUserController);
-router.get("/usuario", findUsersController);
+router.post("/cadastrar", createUserController);
+router.post("/login", findUsersController);
 
 // Posts
 router.post("/posts", createPostController);
