@@ -26,8 +26,9 @@ permission_type: PROFESSOR = 1 , ALUNO = 0
 
 ## Rotas
 
-### Criação de usuário
-- POST: /usuario
+### Criação/Login de usuário
+- POST: /cadastro
+- POST: /login
 
 ### Professores: Criação/Edição/Delete de post
 - POST: /posts
