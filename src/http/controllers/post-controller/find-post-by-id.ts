@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { makeFindPostByIdUseCase } from "../../../use-cases/factory/make-find-post-by-id";
 import { ErrorHandler } from "../../../middlewares/errorHandlers";
+import { makeFindUserUseByIdCase } from "../../../use-cases/factory/make-find-user-by-id";
 
 export const FindPostByIdPostController = async (
   req: Request,
@@ -10,12 +11,17 @@ export const FindPostByIdPostController = async (
 
   try {
     const findPostUseCase = makeFindPostByIdUseCase();
+    const findUserByIdUseCase = makeFindUserUseByIdCase();
     const post = await findPostUseCase.findAllPostsUseCase(postId);
+
+    if (post?.user_id) {
+      const user = await findUserByIdUseCase.findUserByIdUseCase(post?.user_id);
+      res.status(200).json({ post, user });
+    }
 
     if (!post) {
       throw new ErrorHandler(404, "Post nao encontrado");
     }
-    res.status(200).json({ post });
   } catch (error) {
     if (error instanceof ErrorHandler) {
       throw error;

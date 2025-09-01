@@ -34,4 +34,15 @@ export class UserRepository implements IUserRepository {
 
     return user ? user : undefined;
   }
+
+  async findUserRepositoryById(id?: number): Promise<IUser | undefined> {
+    if (!id) return;
+    const userId = await this.repository.findOne({
+      where: {
+        id: id,
+      },
+    });
+
+    return userId ? userId : undefined;
+  }
 }
