@@ -16,7 +16,7 @@ export const FindPostByIdPostController = async (
 
     if (post?.user_id && post) {
       const user = await findUserByIdUseCase.findUserByIdUseCase(post?.user_id);
-      res.status(200).json({ post, user });
+      res.status(200).json({ post, professor: user?.email });
     } else if (post) {
       res.status(200).json({ post });
     } else {
