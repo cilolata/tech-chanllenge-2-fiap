@@ -14,12 +14,12 @@ export const FindPostByIdPostController = async (
     const findUserByIdUseCase = makeFindUserUseByIdCase();
     const post = await findPostUseCase.findAllPostsUseCase(postId);
 
-    if (post?.user_id) {
+    if (post?.user_id && post) {
       const user = await findUserByIdUseCase.findUserByIdUseCase(post?.user_id);
       res.status(200).json({ post, user });
-    }
-
-    if (!post) {
+    } else if (post) {
+      res.status(200).json({ post });
+    } else {
       throw new ErrorHandler(404, "Post nao encontrado");
     }
   } catch (error) {
