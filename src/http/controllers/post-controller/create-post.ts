@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { makeFindUserUseCase } from "../../../use-cases/factory/make-find-user-use-case";
 import { makeCreatePostUseCase } from "../../../use-cases/factory/make-create-post-use-case";
 import { EPermission } from "../../../entities/models/user.interface";
 import { ErrorHandler } from "../../../middlewares/errorHandlers";
+import { makeFindUserUseCase } from "../../../use-cases/factory/make-find-user-user-case";
 
 export const createPostController = async (req: Request, res: Response) => {
   const { title, description, subject, content, user_id } = req.body;

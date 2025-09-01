@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { makeFindUserUseCase } from "../../../use-cases/factory/make-find-user-use-case";
 import { ErrorHandler } from "../../../middlewares/errorHandlers";
+import { makeFindUserUseCase } from "../../../use-cases/factory/make-find-user-user-case";
 
 export const findUsersController = async (req: Request, res: Response) => {
   const { username, password, email } = req.body;
